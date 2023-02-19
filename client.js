@@ -1,5 +1,8 @@
 console.log('Hello World')
 
+const monthStart = 0
+
+
 function submitForm(event) {
     console.log('submitForm');
     event.preventDefault();
@@ -21,15 +24,24 @@ function submitForm(event) {
     `
     // Will add clearing input function 
     clearInputs()
-    totalMonthly()
+    let monthly = Number(annualSalary) + monthStart;
+    document.querySelector('#monthly').innerHTML = monthly;
 }
 
 function clearInputs() {
     document.getElementById('form').reset();
 }
 
-function totalMonthly () {
-    let total = 0
-    Number(annualSalary) + total;
-    document.querySelector('#monthly');
-}
+
+   
+// thinking of adding the annual salary to an array to add all together, since 
+// my annualSalaries are declared inside of a function ..
+// Or I could move the total monthly function within the submit form
+
+
+
+
+// function totalMonthly () {
+//     Number(annualSalary) + monthStart; 
+//     document.querySelector('#monthly').innerHTML = annualStart;
+// }
