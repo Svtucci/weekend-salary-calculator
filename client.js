@@ -14,4 +14,15 @@ function submitForm(event) {
     console.log(title);
     console.log(annualSalary);
 
+    let salaryTable = document.querySelector('#employeeData');
+    salaryTable.innerHTML += `
+    <tr>
+        <td>${firstName}</td>
+        <td>${lastName}</td>
+        <td>${id}</td>
+        <td>${title}</td>
+        <td>${annualSalary}</td>
+    </tr>
+    `
+
 }
