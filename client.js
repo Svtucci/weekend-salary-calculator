@@ -1,7 +1,7 @@
 console.log('Hello World')
 
 const monthStart = 0
-let annualSalaryArray = []
+let annualSalaryArray = [];
 
 function submitForm(event) {
     event.preventDefault();
@@ -21,18 +21,32 @@ function submitForm(event) {
         <td>${annualSalary}</td>
     </tr>
     `
-    // Will add clearing input function 
-    clearInputs()
-    //Will add input to total mmonthly
-    let monthly = annualSalary / 12;
-    document.querySelector('#monthly').innerHTML = monthly; 
+    // Will clear inputs
+    clearInputs();
+    //Will add annual inputs into global salary array 
     annualSalaryArray.push(annualSalary);
-    console.log(annualSalaryArray);
+    console.log(annualSalaryArray); // Used to check if array is filling 
+    let monthlySalary = equateMonthly() // will run function that calculates
+    document.querySelector('#monthly').innerHTML = monthlySalary;
 }
 
 function clearInputs() {
     document.getElementById('form').reset();
 }
+
+function equateMonthly () { //Will run math on array to get total monthly 
+    let monthly = 0 
+    for (let i=0; i < annualSalaryArray.length; i++) {
+    monthly += annualSalaryArray[i] / 12 
+    }
+    console.log(monthly.toFixed(2))
+    return monthly 
+}; 
+
+
+
+
+
 
 
 
@@ -42,7 +56,7 @@ function clearInputs() {
 // are declared inside of the submit function 
 
 
-
+//document.querySelector('#monthly').innerHTML = monthly;
 
 
 
