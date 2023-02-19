@@ -1,16 +1,15 @@
 console.log('Hello World')
 
 const monthStart = 0
-
+// let annualSalary = []
 
 function submitForm(event) {
-    console.log('submitForm');
     event.preventDefault();
     let firstName = document.querySelector('#first-input').value;
     let lastName = document.querySelector('#last-input').value;
     let id = document.querySelector('#id-input').value;
     let title = document.querySelector('#title-input').value;
-    let annualSalary = document.querySelector('#annual-input').value;
+    let annualSalary = Number(document.querySelector('#annual-input').value);
    
     let salaryTable = document.querySelector('#employeeData');
     salaryTable.innerHTML += `
@@ -24,15 +23,25 @@ function submitForm(event) {
     `
     // Will add clearing input function 
     clearInputs()
-    let monthly = Number(annualSalary) + monthStart;
-    document.querySelector('#monthly').innerHTML = monthly;
+    //Will add monthly amount function
+    let monthly = Number(annualSalary) / 12;
+    document.querySelector('#monthly').innerHTML = monthly; 
 }
 
 function clearInputs() {
     document.getElementById('form').reset();
 }
 
+// function addMonth () {
+//     let monthly = Number(annualSalary) / 12;
+//     document.querySelector('#monthly').innerHTML = monthly;
+// }
 
+function addToArray() {
+    annualSalary.push(amount);
+    console.log(annualSalary);
+}
+   
    
 // thinking of adding the annual salary to an array to add all together, since 
 // my annualSalaries are declared inside of a function ..
@@ -45,3 +54,10 @@ function clearInputs() {
 //     Number(annualSalary) + monthStart; 
 //     document.querySelector('#monthly').innerHTML = annualStart;
 // }
+
+
+// function addToArray() {
+//     let amount = Number(document.getElementById('annual-input').value);
+//     annualSalary.push(amount);
+//     console.log(annualSalary);
+// // }
