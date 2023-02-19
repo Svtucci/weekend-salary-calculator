@@ -14,20 +14,37 @@
         <div id="salaryChart">
             <form class="salary-form" onSubmit="submitForm(event)">
                 First name: <input id="first-input" type="string" /> 
-                <br>
+                <br><br>
                 Last name: <input id="first-input" type="string" /> 
-                <br>
+                <br><br>
                 ID: <input id="first-input" type="number" />
-                <br>
+                <br><br>
                 Title: <input id="first-input" type="string" />
-                <br>
+                <br><br>
                 Annual Salary: <input id="first-input" type="number" />
-                <br>
+                <br><br>
                 <input type="submit" value="Add Data" />
 <!--I am going to setup the HTML first to have the frame to then manipulate with the JS, so first this
 is to make the table that will hold the inputs-->
+            </form> 
+            <br>
 
-            </form>
+            <table id="employees">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Annual Salary</th>
+                    </tr>
+                </thead>
+                <tbody id = "employeeData">
+                    <tr>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
         <script src="client.js"></script>
