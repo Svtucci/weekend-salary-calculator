@@ -2,6 +2,7 @@
 <html>
 
     <head>
+        
         <link rel="stylesheet" type="text/css" href="style.css" />
     </head>
 
@@ -10,8 +11,23 @@
             <h1>SALARY CALCULATOR</h1>
         </header>
 
-        <div id="salaryChar">
+        <div id="salaryChart">
+            <form class="salary-form" onSubmit="submitForm(event)">
+                First name: <input id="first-input" type="string" /> 
+                <br>
+                Last name: <input id="first-input" type="string" /> 
+                <br>
+                ID: <input id="first-input" type="number" />
+                <br>
+                Title: <input id="first-input" type="string" />
+                <br>
+                Annual Salary: <input id="first-input" type="number" />
+                <br>
+                <input type="submit" value="Add Data" />
+<!--I am going to setup the HTML first to have the frame to then manipulate with the JS, so first this
+is to make the table that will hold the inputs-->
 
+            </form>
         </div>
 
         <script src="client.js"></script>
