@@ -1,7 +1,7 @@
 console.log('Hello World')
 
 const monthStart = 0
-// let annualSalary = []
+let annualSalaryArray = []
 
 function submitForm(event) {
     event.preventDefault();
@@ -23,24 +23,38 @@ function submitForm(event) {
     `
     // Will add clearing input function 
     clearInputs()
-    //Will add monthly amount function
-    let monthly = Number(annualSalary) / 12;
+    //Will add input to total mmonthly
+    let monthly = annualSalary / 12;
     document.querySelector('#monthly').innerHTML = monthly; 
+    annualSalaryArray.push(annualSalary);
+    console.log(annualSalaryArray);
 }
 
 function clearInputs() {
     document.getElementById('form').reset();
 }
 
+
+
+// Issue right now is trying to ge tthe annual salary input to be added 
+// together and then divided by 12 to get the monthly. 
+// I am having a hard time pulling the inputs since they
+// are declared inside of the submit function 
+
+
+
+
+
+
 // function addMonth () {
 //     let monthly = Number(annualSalary) / 12;
 //     document.querySelector('#monthly').innerHTML = monthly;
 // }
 
-function addToArray() {
-    annualSalary.push(amount);
-    console.log(annualSalary);
-}
+// function addToArray() {
+//     annualSalary.push(amount);
+//     console.log(annualSalary);
+// }
    
    
 // thinking of adding the annual salary to an array to add all together, since 
