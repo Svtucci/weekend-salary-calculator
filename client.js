@@ -8,12 +8,7 @@ function submitForm(event) {
     let id = document.querySelector('#id-input').value;
     let title = document.querySelector('#title-input').value;
     let annualSalary = document.querySelector('#annual-input').value;
-    console.log(firstName);
-    console.log(lastName);
-    console.log(id);
-    console.log(title);
-    console.log(annualSalary);
-
+   
     let salaryTable = document.querySelector('#employeeData');
     salaryTable.innerHTML += `
     <tr>
@@ -24,5 +19,17 @@ function submitForm(event) {
         <td>${annualSalary}</td>
     </tr>
     `
+    // Will add clearing input function 
+    clearInputs()
+    totalMonthly()
+}
 
+function clearInputs() {
+    document.getElementById('form').reset();
+}
+
+function totalMonthly () {
+    let total = 0
+    Number(annualSalary) + total;
+    document.querySelector('#monthly');
 }
