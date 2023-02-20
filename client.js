@@ -28,20 +28,28 @@ function submitForm(event) {
     console.log(annualSalaryArray); // Used to check if array is filling 
     let monthlySalary = equateMonthly() // will run function that calculates
     document.querySelector('#monthly').innerHTML = monthlySalary;
-}
+    changeRed(monthlySalary)
+};
 
 function clearInputs() {
     document.getElementById('form').reset();
 }
 
 function equateMonthly () { //Will run math on array to get total monthly 
-    let monthly = 0 
+    let monthly = 0; 
     for (let i=0; i < annualSalaryArray.length; i++) {
     monthly += annualSalaryArray[i] / 12 
     }
     console.log(monthly.toFixed(2))
-    return monthly 
+    return monthly
 }; 
+
+function changeRed (monthlySalary) {
+    if (monthlySalary >= 20000) {
+        document.querySelector('#monthly').style.color = 'red'; //turn background to red 
+    } 
+};
+
 
 
 
@@ -70,19 +78,14 @@ function equateMonthly () { //Will run math on array to get total monthly
 //     console.log(annualSalary);
 // }
    
-   
 // thinking of adding the annual salary to an array to add all together, since 
 // my annualSalaries are declared inside of a function ..
 // Or I could move the total monthly function within the submit form
-
-
-
 
 // function totalMonthly () {
 //     Number(annualSalary) + monthStart; 
 //     document.querySelector('#monthly').innerHTML = annualStart;
 // }
-
 
 // function addToArray() {
 //     let amount = Number(document.getElementById('annual-input').value);
