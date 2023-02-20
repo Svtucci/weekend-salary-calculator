@@ -19,6 +19,7 @@ function submitForm(event) {
         <td>${id}</td>
         <td>${title}</td>
         <td>${annualSalary}</td>
+        <td><button onClick="removeRow(event)">Remove</button>
     </tr>
     `
     // Will clear inputs
@@ -33,7 +34,7 @@ function submitForm(event) {
 
 function clearInputs() {
     document.getElementById('form').reset();
-}
+};
 
 function equateMonthly () { //Will run math on array to get total monthly 
     let monthly = 0; 
@@ -49,6 +50,15 @@ function changeRed (monthlySalary) {
         document.querySelector('#monthly').style.color = 'red'; //turn background to red 
     } 
 };
+
+function removeRow(event) {
+    event.target.closest('tr').remove();
+}
+
+
+
+
+
 
 
 
