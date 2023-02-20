@@ -47,7 +47,7 @@ function equateMonthly () { //Will run math on array to get total monthly
 
 function changeRed (monthlySalary) {
     if (monthlySalary >= 20000) {
-        document.querySelector('#monthly').style.color = 'red'; //turn background to red 
+        document.querySelector('#monthly').style.backgroundColor = 'red'; //turn background to red 
     } 
 };
 
@@ -57,7 +57,8 @@ function removeRow(event) {
 
 
 
-
+// for the stretch goal we have to target the salary within the array that is being removed
+// 
 
 
 

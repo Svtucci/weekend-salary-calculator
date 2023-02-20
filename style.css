@@ -1,3 +1,15 @@
 h1 {
-    color: blue;
+    color: black;
+}
+
+header {
+    text-align: center;
+    background-color: grey;
+    color:brown; 
+    padding: 12px 32px;
+    font-weight: 500;
+}
+
+salaryChart {
+    
 }
